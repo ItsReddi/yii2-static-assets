@@ -171,7 +171,7 @@ class AssetHelper
 
     }
 
-    public static function parseClass(array &$tokens): ?string
+    public static function parseClass(array &$tokens)
     {
         self::popUntil($tokens, [T_CLASS]);
         $popped = self::popUntil($tokens, ['{', T_EXTENDS, T_IMPLEMENTS]);
