@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 namespace SamIT\Yii2\StaticAssets\controllers;
 
@@ -36,7 +36,7 @@ class AssetController extends Controller
     public $excludedPatterns = [];
 
 
-    public function init(): void
+    public function init()
     {
         parent::init();
         $this->defaultBundle = $this->module->defaultBundle;
@@ -45,7 +45,7 @@ class AssetController extends Controller
     }
 
 
-    public function actionPublish($path): void
+    public function actionPublish($path)
     {
         $assetManager = $this->getAssetManager($path);
         $this->stdout("Publishing application assets... ", Console::FG_CYAN);

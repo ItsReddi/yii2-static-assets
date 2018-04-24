@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 namespace SamIT\Yii2\StaticAssets\helpers;
 
@@ -43,7 +43,7 @@ class AssetHelper
     public static function findAssetBundles(string $baseDir, array $excludedPatterns = []): array
     {
         // We register an autoloader to handle missing classes.
-        $autoLoader = function($class): void {
+        $autoLoader = function($class) {
             echo "Autoloading: $class\n";
             $trace = \debug_backtrace(0, 2);
 
@@ -218,7 +218,7 @@ class AssetHelper
      * Recursively creates gzip files for all files in the directory.
      * @param string $baseDir
      */
-    public static function createGzipFiles(string $baseDir): void
+    public static function createGzipFiles(string $baseDir)
     {
         // We do not care about memory usage and assume all files fit in memory.
         $iter = new RecursiveIteratorIterator(
@@ -238,7 +238,7 @@ class AssetHelper
         }
     }
 
-    public static function publishAssets(AssetManager $assetManager, $baseDir, $excludedPatterns = []): void
+    public static function publishAssets(AssetManager $assetManager, $baseDir, $excludedPatterns = [])
     {
         foreach(self::findAssetBundles($baseDir, $excludedPatterns) as $bundle) {
             $assetManager->getBundle($bundle, true);

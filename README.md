@@ -1,3 +1,7 @@
+# Introduction
+You may want to use github.com:SAM-IT/yii2-static-assets, it's the original, and have more functions.
+This one is modified for personal use, Docs are currently not updated
+
 # yii2-static-assets
 Prevent publishing of assets at production time without changing your application.
 

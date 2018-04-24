@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 $dir = __DIR__;
 while(!\file_exists($dir . '/vendor/autoload.php') && $dir !== '/') {
     $dir = \dirname($dir);
@@ -21,8 +21,6 @@ $application = new \yii\console\Application([
     'modules' => [
         'staticAssets' => [
             'class' => \SamIT\Yii2\StaticAssets\Module::class,
-            'push' => true,
-            'image' => \md5(\random_bytes(5))
         ]
     ]
 ]);

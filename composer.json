@@ -1,6 +1,6 @@
 {
-    "name": "sam-it/yii2-static-assets",
-    "description": "Generate static assets and build a docker nginx container",
+    "name": "itsreddi/yii2-static-assets",
+    "description": "Generate static assets",
     "type": "yii2-extension",
     "require-dev": {
         "yiisoft/yii2": "^2.0",
@@ -12,12 +12,13 @@
         {
             "name": "Sam Mousa",
             "email": "sam@mousa.nl"
-        }
+        },
+        {
+            "name": "Philipp Reddigau",
+            "email": "sam@itsreddi.com"
+        },
     ],
-    "require": {
-        "yiisoft/yii2": "^2.0",
-        "docker-php/docker-php": "^2",
-        "docker-php/docker-php-api": "4.1.35"
+    "require": {   
     },
     "repositories": [
         {
