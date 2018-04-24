@@ -16,9 +16,10 @@
         {
             "name": "Philipp Reddigau",
             "email": "sam@itsreddi.com"
-        },
+        }
     ],
     "require": {   
+        "yiisoft/yii2": "^2.0"
     },
     "repositories": [
         {
